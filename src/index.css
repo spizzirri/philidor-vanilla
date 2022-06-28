@@ -21,30 +21,43 @@ header{
 
 main{
     margin: 1em;
-    margin-top: 2em;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
 
-nav{
-    text-align: center;
-}
-
-nav ul{
+ul{
     list-style: none;
 }
 
-nav ul li{
-    display: inline-block;
+.horarios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-nav ul li a {
-    text-decoration: none;
-}
-
-#inicio{
+.horarios-generales{
+    padding: 1em;
     white-space: pre-line;
+    background-color: beige;
+    width: 90%;
+}
+
+.horarios-clases{
+    padding: 1em;
+    white-space: pre-line;
+}
+
+.horarios-clases--infantil{
+    background-color: aliceblue;
+    width: 90%;
+}
+
+.horarios-clases--adultos{
+    background-color: antiquewhite;
+    width: 90%;
 }
 
 #contacto iframe {
@@ -53,7 +66,7 @@ nav ul li a {
     border: 0;
 }
 
-#torneos img, #fotos img{
+#fotos img{
     width: 100%;
 }
 
@@ -67,12 +80,20 @@ nav ul li a {
         height: 150px;
         width: 100%;
     }
+
+    .horarios-generales, .horarios-clases--infantil, .horarios-clases--adultos{
+        width: 90%;
+    }
 }
   
 @media (min-width: 768px) {  
 
     body{
         font-size: 1.5em;
+    }
+
+    .horarios-generales, .horarios-clases--infantil, .horarios-clases--adultos{
+        width: 90%;
     }
 
     #contacto iframe {
@@ -87,9 +108,8 @@ nav ul li a {
         font-size: 1em;
     }
 
-    #torneos article{
-        display: flex;
-        gap: 1em;
+    .horarios-generales, .horarios-clases--infantil, .horarios-clases--adultos{
+        width: 30%;
     }
 
     #fotos article{
